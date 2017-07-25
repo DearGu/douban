@@ -11,10 +11,10 @@ class NavBar extends Component{
 						<h1 className="logo">豆瓣</h1>
 					</a>
 					<ul className="flexDiv">
-						<li className="flexItem mr15">电影</li>
-						<li className="flexItem mr15">图书</li>
-						<li className="flexItem mr15">广播</li>
-						<li className="flexItem mr15">小组</li>
+						<li className="flexItem mr15 c2384E8">电影</li>
+						<li className="flexItem mr15 c9F7860">图书</li>
+						<li className="flexItem mr15 cE4A813">广播</li>
+						<li className="flexItem mr15 cE4A813">小组</li>
 						<li className="flexItem">搜索</li>
 					</ul>
 				</div>

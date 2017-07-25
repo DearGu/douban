@@ -1,4 +1,4 @@
-//公共样式
+//初始样式
 $root-width:15px;
 
 body,ul,p,h1,h2,h3{
@@ -15,18 +15,17 @@ ul{
 a{
     text-decoration: none;
 }
-li,div,a{
+li,div,a,input{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 @media screen and (min-width:1024px){
     .wrap{
-        max-width: 4.333333rem;
+        max-width: 43.33333rem;
         margin: 0 auto;
-        border: 1px solid #000;
     }
 }
 
-
+//公共样式
 .wrap{
     position: relative;
     width: 100%;
@@ -43,4 +42,16 @@ li,div,a{
 }
 .mr15{
     margin-right: 15px;
+}
+.c2384E8{
+    color:#2384E8;
+}
+.c9F7860{
+    color:#9F7860;
+}
+.cE4A813{
+    color:#E4A813;
+}
+.cE4A813{
+    color:#E4A813;
 }
