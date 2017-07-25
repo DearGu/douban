@@ -1,0 +1,46 @@
+//公共样式
+$root-width:15px;
+
+body,ul,p,h1,h2,h3{
+    margin:0;
+    padding:0;
+}
+html,ul,p,h1,h2,h3{
+    font-size: $root-width;
+    color:#333;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+li,div,a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+@media screen and (min-width:1024px){
+    .wrap{
+        max-width: 4.333333rem;
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+}
+
+
+.wrap{
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+}
+.fixed{
+    position: absolute;
+}
+.flexDiv{
+    display: flex;
+}
+.flexItem{
+    flex: 1;
+}
+.mr15{
+    margin-right: 15px;
+}

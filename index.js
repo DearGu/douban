@@ -1,12 +1,13 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
-import "./scss/index.scss";
+import Home from "./components/Home";
+import "./scss/common.scss";
 
 class App extends Component{
 	render(){
 		return(
-			<div className="test">
-				<p>12345</p>
+			<div className="wrap">
+				<Home/>
 			</div>
 		)
 	}
