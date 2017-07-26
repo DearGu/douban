@@ -40,8 +40,17 @@ li,div,a,input{
 .flexItem{
     flex: 1;
 }
+.mt5{
+    margin-top: 0.333333rem;
+}
+.mt20{
+    margin-top: 1.333333rem;
+}
+.mr5{
+    margin-right: 0.333333rem;
+}
 .mr15{
-    margin-right: 15px;
+    margin-right: 1rem;
 }
 .c2384E8{
     color:#2384E8;
@@ -52,6 +61,21 @@ li,div,a,input{
 .cE4A813{
     color:#E4A813;
 }
-.cE4A813{
-    color:#E4A813;
+.c2AB8CC{
+    color:#2AB8CC;
+}
+.content{
+    width: 100%;
+    padding: 3.1333333rem 1.2rem 0 1.2rem;
+    box-sizing: border-box;
+}
+.fl{
+    float: left;
+}
+.clear{
+    zoom: 1;
+}
+.clear:after{
+    content: "";
+    clear: both;
 }
