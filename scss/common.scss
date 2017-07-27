@@ -4,6 +4,7 @@ $root-width:15px;
 body,ul,p,h1,h2,h3{
     margin:0;
     padding:0;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 html,ul,p,h1,h2,h3{
     font-size: $root-width;
@@ -25,6 +26,18 @@ li,div,a,input{
     }
 }
 
+//修改滚动条样式
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar{
+    width: 3px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb{    
+    border-radius: 10px;    
+    background: rgba(0,0,0,0.2);    
+}
+
 //公共样式
 .wrap{
     position: relative;
@@ -43,8 +56,17 @@ li,div,a,input{
 .mt5{
     margin-top: 0.333333rem;
 }
+.mt10{
+    margin-top: 0.666666rem;
+}
 .mt20{
     margin-top: 1.333333rem;
+}
+.mb5{
+    margin-bottom: 0.333333rem;
+}
+.mb10{
+    margin-bottom: 0.666666rem;
 }
 .mr5{
     margin-right: 0.333333rem;
@@ -68,9 +90,13 @@ li,div,a,input{
     width: 100%;
     padding: 3.1333333rem 1.2rem 0 1.2rem;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 .fl{
     float: left;
+}
+.fr{
+    float:right;
 }
 .clear{
     zoom: 1;
@@ -78,4 +104,8 @@ li,div,a,input{
 .clear:after{
     content: "";
     clear: both;
+    display: block;
+}
+.relative{
+    position: relative;
 }

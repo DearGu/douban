@@ -15,6 +15,7 @@ class HotList extends Component{
 			url:"https://m.douban.com/rexxar/api/v2/recommend_feed",
 			dataType:"jsonp",
 			success:function(result){
+				console.log(result.recommend_feeds);
 				self.setState({hotList:result.recommend_feeds});
 			}
 		});
