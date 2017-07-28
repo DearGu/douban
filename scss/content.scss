@@ -17,6 +17,43 @@
         }
     }
     
+    @-webkit-keyframes load{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+    
+    .moreTip{
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        
+        span{
+            display: inline-block;
+            width: .6rem;
+            height: .6rem;
+            margin-right: 5px;
+            border-radius: 50%;
+            background: lightgreen;
+            -webkit-animation: load 0.8s ease infinite;
+            &:last-child{
+                margin-right: 0px;
+            }
+            &:nth-child(1){
+                -webkit-animation-delay:0.15s;
+            }
+            &:nth-child(2){
+                -webkit-animation-delay:0.3s;
+            }
+            &:nth-child(3){
+                -webkit-animation-delay:0.45s;
+            }
+        }
+    }
+    
     .hotListItem{
         width: 100%;
         padding: 1.66666rem 0;
@@ -74,7 +111,7 @@
             line-height: 100%;
             span{
                 width: 20px;
-                height: 20px;
+                height: 12px;
                 display: block;
                 position: absolute;
                 font-size: 0.8rem;
