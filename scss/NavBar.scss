@@ -11,8 +11,11 @@
     .NavBar-inner{        
         height: 100%;
         display: flex;
+        display: -webkit-flex;
         justify-content:space-between;
+        -webkit-justify-content: space-between;
         align-items: center;
+        -webkit-align-items: center;
     }
     
     .logo{

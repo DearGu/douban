@@ -1,7 +1,10 @@
 //初始样式
 $root-width:15px;
 
-body,ul,p,h1,h2,h3{
+body{
+    -webkit-overflow-scrolling:touch;    
+}
+body,ul,p,h1,h2,h3{    
     margin:0;
     padding:0;
     font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
@@ -49,9 +52,15 @@ li,div,a,input{
 }
 .flexDiv{
     display: flex;
+    display: -webkit-flex;
 }
 .flexItem{
     flex: 1;
+    -webkit-flex: 1;
+}
+.flexItem_dobule{
+     flex: 2;
+    -webkit-flex: 2;
 }
 .mt5{
     margin-top: 0.333333rem;

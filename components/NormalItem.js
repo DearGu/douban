@@ -5,7 +5,7 @@ class NormalItem extends Component{
 	render(){
 		return(
 			<div className="item_wrap flexDiv mb10">
-				<div style={{flex:2}}>
+				<div className="flexItem_dobule">
 					<h3>{this.props.list.title}</h3>
 					<p>{this.props.list.target.desc}</p>
 				</div>

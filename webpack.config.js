@@ -34,6 +34,7 @@ module.exports = {
 	devServer:{
 		contentBase:"./public",
 		inline:true,
-		port:8888
+		port:8888,
+		disableHostCheck:true  //设置为true可以允许IP访问
 	}
 }
