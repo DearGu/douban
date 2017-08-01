@@ -33,7 +33,6 @@ class Content extends Component{
 			data:{next_date:data_date,for_mobile:1,alt:"json"},
 			dataType:"jsonp",
 			success:function(result){
-				console.log(result.recommend_feeds);
 				self.setState({hotList:self.state.hotList.concat(result),moreTip:false,lock_scroll:false})
 				/*86400000为一天的毫秒数*/
 				!isNow? self.sumDate += 86400000:"";
@@ -42,7 +41,7 @@ class Content extends Component{
 	}
 	
 	/*上拉加载更多*/
-	loadMore(){
+	loadMore(e){
 		const ScrollHight = document.querySelector(".content").scrollHeight;
         const ScrollTop = document.querySelector(".content").scrollTop;
         const OffsetHeight = document.querySelector(".content").offsetHeight;	 
@@ -54,7 +53,7 @@ class Content extends Component{
 	
 	render(){
 		return(
-			<div className="content" onTouchMove={this.loadMore.bind(this)}>
+			<div className="content" onTouchMove={this.loadMore.bind(this)} onScroll={this.loadMore.bind(this)}>
 				<QuickNav/>
 				{
 					this.state.hotList.map((list,index)=>{return <HotList list={list} show_date={{data_date:list.date,wrapIdx:index}} key={index}/>})

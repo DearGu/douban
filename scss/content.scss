@@ -123,9 +123,26 @@
         }
     } 
     .DateTitle{
-            padding: 1rem 0;
-            text-align: center;
-            font-size: 1.2rem;
-            border-bottom: 1px solid #f6f6f6;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 1.2rem;
+        border-bottom: 1px solid #f6f6f6;
+    }
+    .card-swipe{
+        width: 100%;
+        overflow: hidden;
+    }
+    .card-slide{
+        width: 1000px;
+    }
+    .film_item{
+        margin-left: 0.48rem;
+        &:first-child{
+            margin-left:0;
         }
+    }
+    .film_cover{
+        width: 6.67rem;
+        height: 9.47rem;
+    }
 }
