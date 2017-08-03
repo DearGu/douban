@@ -1,4 +1,6 @@
 .content{
+    $film_count:8;
+    $film_count_ml:7;
     .quickNav{
         ul{
             width: 100%;
@@ -133,16 +135,51 @@
         overflow: hidden;
     }
     .card-slide{
-        width: 1000px;
+        width: $film_count*6.67rem+$film_count_ml*0.48rem;
     }
     .film_item{
+        width: 6.67rem;
         margin-left: 0.48rem;
         &:first-child{
             margin-left:0;
         }
     }
     .film_cover{
-        width: 6.67rem;
+        width: 100%;
         height: 9.47rem;
+    }
+    .type_title{
+        font-size: (18/15)*1rem;
+        color:#111;
+    }
+    .film_title{
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+        font-size: (14/15)*1rem;
+        color:#111;
+        margin-top: (10/15)*1rem;
+    }
+    .film_rating{
+        font-size: (12/15)*1rem;
+        color:#aaa;
+        text-align: center;
+        margin-top: (5/15)*1rem;
+    }
+    .light_star,.normal_star{
+        width:(10/15)*1rem;
+        height:(10/15)*1rem;
+        display: inline-block;
+        margin-right: 1px;
+    }
+    .light_star{
+        background: url(../images/light_star.png)no-repeat center;
+        background-size: 10px 10px;
+    }
+    .normal_star{
+        background: url(../images/normal_star.png)no-repeat center;
+        background-size: 10px 10px;
     }
 }
