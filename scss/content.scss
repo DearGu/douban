@@ -1,6 +1,8 @@
 .content{
     $film_count:8;
     $film_count_ml:7;
+    $green:#42bd56;
+    
     .quickNav{
         ul{
             width: 100%;
@@ -149,8 +151,9 @@
         height: 9.47rem;
     }
     .type_title{
-        font-size: (18/15)*1rem;
-        color:#111;
+       font-size: (18/15)*1rem;
+       color:#111; 
+       font-weight: normal;     
     }
     .film_title{
         width: 100%;
@@ -182,4 +185,52 @@
         background: url(../images/normal_star.png)no-repeat center;
         background-size: 10px 10px;
     }
+    .moreFilm{
+        width: 2*(14/15)*1rem;
+        height: (20/15)*1rem;
+        font-size:(14/15)*1rem;
+        color:$green;
+        display: block;
+        position: absolute;
+        margin:auto;
+        right: 0;
+        top:0;
+        bottom:0;
+    }
+    .filmType_wrap{
+        padding-top: (18/15)*1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #eee;
+        .filmType{
+            width: 50%;
+            height: (42/15)*1rem;
+            line-height: (42/15)*1rem;
+            border-top:1px solid #eee ;
+            box-sizing: border-box;
+            padding-right:(17/15)*1rem;
+            color:$green;
+            position: relative;
+            font-size: (14/15)*1rem;
+            &:nth-child(odd){
+                border-right:1px solid #eee;
+            }
+            &:nth-child(even){
+                padding-left:(17/15)*1rem;
+            }
+        }
+        .arrow{
+            width: (9/15)*1rem;
+            height: (9/15)*1rem;
+            display: block;
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            position: absolute;
+            margin: auto;
+            top:0;
+            bottom:0;
+            right: 10%;
+        }
+    }   
 }

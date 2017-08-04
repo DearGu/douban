@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
 
-class FilmItem extends Component{
+class CardItem extends Component{
 	constructor(props){
 		super(props);
 		this.star_num = 0;
@@ -35,4 +35,4 @@ class FilmItem extends Component{
 	}
 }
 
-export default FilmItem;
+export default CardItem;

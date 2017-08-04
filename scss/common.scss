@@ -77,6 +77,9 @@ li,div,a,input{
 .mb10{
     margin-bottom: 0.666666rem;
 }
+.mb35{
+    margin-bottom: (35/15)*1rem;
+}
 .ml3{
     margin-left: (3/15)*1rem;
 }
@@ -108,7 +111,7 @@ li,div,a,input{
     width: 100%;
     padding: 3.1333333rem 1.2rem 0 1.2rem;
     box-sizing: border-box;
-//  overflow-y: auto;
+    overflow-y: auto;
 }
 .fl{
     float: left;
