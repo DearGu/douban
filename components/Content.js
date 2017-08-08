@@ -54,14 +54,16 @@ class Content extends Component{
 	render(){
 		return(
 			<div className="content" onTouchMove={this.loadMore.bind(this)} onScroll={this.loadMore.bind(this)}>
-				<QuickNav/>
-				{
-					this.state.hotList.map((list,index)=>{return <HotList list={list} show_date={{data_date:list.date,wrapIdx:index}} key={index}/>})
-				}
-				<div className="moreTip" style={{display:this.state.moreTip? "block":"none"}}>
-					<span></span>
-			        <span></span>
-			        <span></span>
+				<div className="content_wrap">
+					<QuickNav/>
+					{
+						this.state.hotList.map((list,index)=>{return <HotList list={list} show_date={{data_date:list.date,wrapIdx:index}} key={index}/>})
+					}
+					<div className="moreTip" style={{display:this.state.moreTip? "block":"none"}}>
+						<span></span>
+				        <span></span>
+				        <span></span>
+					</div>
 				</div>
 			</div>
 		)

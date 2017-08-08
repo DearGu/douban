@@ -2,7 +2,7 @@
     $film_count:8;
     $film_count_ml:7;
     $green:#42bd56;
-    
+//  快速导航样式
     .quickNav{
         ul{
             width: 100%;
@@ -29,7 +29,7 @@
             opacity: 0;
         }
     }
-    
+//  loading样式
     .moreTip{
         height: 3rem;
         line-height: 3rem;
@@ -57,7 +57,7 @@
             }
         }
     }
-    
+//  首页列表样式
     .hotListItem{
         width: 100%;
         padding: 1.66666rem 0;
@@ -95,7 +95,7 @@
             font-size: 0.8rem;
         }
     }
-    
+//  电影样式
     .bigPic{
         height: 11rem;
         flex:3;
@@ -134,19 +134,23 @@
     }
     .card-swipe{
         width: 100%;
-        overflow: hidden;
+//      overflow: hidden;
     }
     .card-slide{
-        width: $film_count*6.67rem+$film_count_ml*0.48rem;
+//      width: $film_count*6.67rem+$film_count_ml*0.48rem;
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling:auto;
     }
-    .film_item{
+    .card_item{
         width: 6.67rem;
         margin-left: 0.48rem;
+        display: inline-block;
         &:first-child{
             margin-left:0;
         }
     }
-    .film_cover{
+    .card_cover{
         width: 100%;
         height: 9.47rem;
     }
@@ -155,7 +159,7 @@
        color:#111; 
        font-weight: normal;     
     }
-    .film_title{
+    .card_title{
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
@@ -165,7 +169,7 @@
         color:#111;
         margin-top: (10/15)*1rem;
     }
-    .film_rating{
+    .card_rating{
         font-size: (12/15)*1rem;
         color:#aaa;
         text-align: center;
@@ -232,5 +236,95 @@
             bottom:0;
             right: 10%;
         }
+    }
+//  页面底部样式
+    .footer{
+        text-align: center;
+        padding:(50/15)*1rem 0 (50/15)*1rem 0;
+    }
+    .down_load_wrap{
+        width: (160/15)*1rem;
+        height: (48/15)*1rem;
+        display: inline-block;
+        margin:0 auto 1rem auto;   
+        .down_load_img{
+            width: (48/15)*1rem;
+            height: (48/15)*1rem;
+            margin-right: (12/15)*1rem;
+            background: url(../images/douban-app-logo.png) no-repeat center;
+            background-size: 100%;
+        }
+        .down_load_title{
+            font-size: (24/15)*1rem;
+            line-height: 28px;
+            color:#111;
+            text-align: left;
+        }
+    }
+//  图书样式
+    .cover{
+        width:(100/15)*1rem;
+        height: (132/15)*1rem;
+        display: block;
+        float: left;
     }   
+    .book_title{
+        padding: (10/15)*1rem 0;
+        font-size: (19/15)*1rem;
+        color:#494949;
+    }
+    .book_info{
+        display: -webkit-box;
+        font-size: (13/15)*1rem;
+        color:#9B9B9B;
+        overflow: hidden;
+        -webkit-box-orient:vertical;
+        -webkit-line-clamp:4
+    }
+    .book_price{
+        font-size: (16/15)*1rem;
+        color:#E76648;
+        float: right;
+        line-height: (25/15)*1rem;
+    }
+//  广播样式
+    .download_tips{
+        width: 100%;
+        height: (88/15)*1rem;
+        background: url(../images/promotion_bg.jpg)no-repeat center;
+        background-size: cover;
+    }
+    .download_tips_wrap{
+        width: 100%;
+        height: 100%;
+        padding: 0 1.2rem;
+        box-sizing: border-box;
+        display: flex;
+        display: -webkit-flex;
+        justify-content:space-between;
+        -webkit-justify-content: space-between;
+        align-items: center;
+        -webkit-align-items: center;
+        font-size: (14/15)*1rem;
+        color:#2CA532;
+    }
+    .fast_download_btn,.open_app_btn{
+        height: (28/15)*1rem;
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid #42bd56;
+        border-radius: 3px;        
+        padding: 0 (14/15)*1rem;        
+        font-weight: bold;
+        line-height: (28/15)*1rem;
+        font-size: (13/15)*1rem;      
+    }
+    .fast_download_btn{
+        background: #42bd56;
+        color:white;
+        margin-right: (8/15)*1rem;
+    }
+    .open_app_btn{
+        color:#42bd56;
+    }
 }

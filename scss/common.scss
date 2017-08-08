@@ -33,13 +33,13 @@ li,div,a,input{
 
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar{
-    width: 3px;
+    width: 0px;
 }
 /* 滚动条滑块 */
-::-webkit-scrollbar-thumb{    
-    border-radius: 10px;    
-    background: rgba(0,0,0,0.2);    
-}
+//::-webkit-scrollbar-thumb{    
+//  border-radius: 10px;    
+//  background: rgba(0,0,0,0.2);    
+//}
 
 //公共样式
 .wrap{
@@ -67,6 +67,9 @@ li,div,a,input{
 }
 .mt10{
     margin-top: 0.666666rem;
+}
+.mt15{
+    margin-top: 1rem;
 }
 .mt20{
     margin-top: 1.333333rem;
@@ -107,11 +110,18 @@ li,div,a,input{
 .c2AB8CC{
     color:#2AB8CC;
 }
+.c42bd56{
+    color:#42bd56;
+}
 .content{
     width: 100%;
-    padding: 3.1333333rem 1.2rem 0 1.2rem;
+    padding-top: 3.1333333rem;
     box-sizing: border-box;
     overflow-y: auto;
+    .content_wrap{
+        padding: 0 1.2rem;
+        box-sizing: border-box;
+    }
 }
 .fl{
     float: left;
@@ -129,4 +139,10 @@ li,div,a,input{
 }
 .relative{
     position: relative;
+}
+.fz14{
+    font-size: (14/15)*1rem;
+}
+.c111{
+    color:#111;
 }

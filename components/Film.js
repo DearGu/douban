@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
 import RowItem from "./RowItem";
+import DownLoad from "./DownLoad";
 
 class Film extends Component{
 	constructor(props){
@@ -58,23 +59,26 @@ class Film extends Component{
 	render(){
 		return(
 			<div className="content">
-				<div className="pt10">
-					{
-						this.state.FilmArr.map((item,idx)=> <RowItem item={item} key={idx}/>)
-					}
-				</div>
-				<div>
-					<h2 className="type_title">分类浏览</h2>
-					<ul className="clear filmType_wrap">
+				<div className="content_wrap">
+					<div className="pt10">
 						{
-							this.typeList.map((item,idx)=> 
-								<li key={idx} className="fl filmType">
-									{item} 
-									{idx!=this.typeList.length-1? <span className="arrow"></span>:""}
-								</li>
-							)
+							this.state.FilmArr.map((item,idx)=> <RowItem item={item} key={idx} cardType="rating"/>)
 						}
-					</ul>
+					</div>
+					<div>
+						<h2 className="type_title">分类浏览</h2>
+						<ul className="clear filmType_wrap">
+							{
+								this.typeList.map((item,idx)=> 
+									<li key={idx} className="fl filmType">
+										{item} 
+										{idx!=this.typeList.length-1? <span className="arrow"></span>:""}
+									</li>
+								)
+							}
+						</ul>
+					</div>
+					<DownLoad/>
 				</div>
 			</div>
 		)

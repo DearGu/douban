@@ -24,7 +24,11 @@ class NavBar extends Component{
 								图书
 							</Link>									
 						</li>
-						<li className="mr15 cE4A813">广播</li>
+						<li className="mr15">
+							<Link to={`${this.props.match.url}/boardcast`} className="cE4A813">
+								广播
+							</Link>	
+						</li>
 						<li className="mr15 c2AB8CC">小组</li>
 						<li>
 							<span className="search_logo"></span>
