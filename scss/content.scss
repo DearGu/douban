@@ -327,4 +327,188 @@
     .open_app_btn{
         color:#42bd56;
     }
+    .status_bar{
+        width: 100%;
+        height: (60/15)*1rem;
+        box-sizing: border-box;
+        padding: (10/15)*1rem (18/15)*1rem;
+        display: flex;
+        display: -webkit-flex;
+        justify-content:space-between;
+        -webkit-justify-content: space-between;
+        align-items: center;
+        -webkit-align-items: center;
+        position: relative;
+        img{
+            width: (40/15)*1rem;
+            height: (40/15)*1rem;
+            display: inline-block;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: (10/15)*1rem;
+        }
+        &:after{
+            content:"";
+            width:100%;
+            height: 1px;
+            background: #E8E8E8;
+            position: absolute;
+            left: 0;
+            bottom:0;
+        }
+    }
+    .icon_pen,.icon_camera{
+        width: (24/15)*1rem;
+        height: (24/15)*1rem;
+        display: inline-block;
+    }
+    .icon_pen{
+        margin-right: (18/15)*1rem;
+        background: url(../images/ic_status_pen.svg)no-repeat center;
+        background-size: cover;
+    }
+    .icon_camera{
+        margin-right: (8/15)*1rem;
+        background: url(../images/ic_status_camera.svg)no-repeat center;
+        background-size: cover;
+    }
+    .boardcast_item{
+        margin: (20/15)*1rem 0;
+        position: relative;
+    }
+    .author_head{
+        width: (40/15)*1rem;
+        height: (40/15)*1rem;
+        display: inline-block;
+        border-radius: 50%;
+        margin-right: (10/15)*1rem;
+    }
+    .boardcast_author{
+        font-size: (17/15)*1rem;
+        font-weight: bold;
+        color:#494949;
+        span{
+            font-weight: normal;
+            color:#aaa;
+        }
+    }
+    .boardcast_time{
+        font-size: (14/15)*1rem;
+        margin-top: (5/15)*1rem;
+        color:#aaa;
+    }
+    .reshare{
+        font-size: (12/15)*1rem;
+        color:#ccc;
+        margin: (10/15)*1rem 0;
+        line-height: (20/15)*1rem;
+        span{
+            width: (20/15)*1rem;
+            height: (20/15)*1rem;
+            display: inline-block;
+            background: url(../images/ic_retweet_gray.svg)no-repeat center;
+            background-size: cover;
+            vertical-align: bottom;
+        }
+    }
+    .boardcast_content{
+        padding-bottom:(20/15)*1rem ;
+        margin-left: (50/15)*1rem;
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #E8E8E8;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .boardcast_card{
+        margin: (10/15)*1rem 0 (20/15)*1rem 0;
+        padding: 0.95rem;
+        background: #f9f9f9;
+    }
+    .boardcast_card_titile{
+        font-size: (17/15)*1rem;
+        color:#494949;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-bottom: (5/15)*1rem;
+    }
+    .boardcast_card_content{
+        font-size: (12/15)*1rem;
+        color:#aaa;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-height: 1.3rem;
+    }
+    .has_cover{
+        padding-right: (90/15)*1rem;
+    }
+    .boardcast_card_img{
+        width: (75/15)*1rem;
+        height: 100%;
+        margin-left: (10/15)*1rem;
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    .boardcast_item_content{
+        font-size: 1.08rem;
+        line-height: (22/15)*1rem;
+        margin-top: (10/15)*1rem;
+        img{
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .img_wrap{
+            margin-top: 1rem;
+            img{
+                width: (92/15)*1rem;
+                height: (92/15)*1rem;
+                display: block; 
+                float:left;
+                margin: 0 (3/15)*1rem (3/15)*1rem 0;         
+            }
+        }
+    }
+    .info{
+        margin-top: (13/15)*1rem;
+        i{
+            width: (20/15)*1rem;
+            height: (20/15)*1rem;
+            display: inline-block;   
+            vertical-align: middle; 
+            margin-top: -3px;      
+        }
+        span{
+            font-size: (14/15)*1rem;
+            color:#ccc;
+            margin-left: (3/15)*1rem;
+        }
+        .ic_zan{
+            background: url(../images/ic_like_gray.svg)no-repeat center;
+            background-size:cover;
+        }
+        .ic_comment{
+            background: url(../images/ic_comment.svg)no-repeat center;
+            background-size:cover;
+        }
+        .ic_retweet{
+            background: url(../images/ic_retweet_gray.svg)no-repeat center;
+            background-size:cover;
+        }
+        .ic_more{
+            background: url(../images/more.svg)no-repeat center;
+            background-size:100%;
+        }
+    }
 }

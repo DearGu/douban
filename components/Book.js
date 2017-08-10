@@ -8,11 +8,13 @@ class Book extends Component{
 		super(props);
 		this.state = {BookArr:[]};
 		this.typeList = ["小说","爱情","历史","外国文学","青春","励志","随笔","传记","推理","旅行","奇幻","经管"];
+		this.window_height = 0;
 	}
 	
 	componentWillMount(){
 		/*promise解决回调地狱*/
 		this.fictionBook().then(this.NofictionBook.bind(this)).then(this.BookShop.bind(this));	
+		this.window_height = $(window).height();
 	}
 	
 	/*虚构类图书promise对象*/
@@ -60,7 +62,7 @@ class Book extends Component{
 	
 	render(){
 		return(
-			<div className="content">
+			<div className="content" style={{height:this.window_height}}>
 				<div className="content_wrap">
 					<div className="pt10">
 						{
@@ -80,7 +82,7 @@ class Book extends Component{
 							}
 						</ul>
 					</div>
-					<DownLoad/>
+					<DownLoad msg="我们的精神角落"/>
 				</div>
 			</div>
 		)

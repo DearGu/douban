@@ -7,12 +7,14 @@ class Film extends Component{
 	constructor(props){
 		super(props);
 		this.state = {FilmArr:[]};
-		this.typeList = ["经典","冷门佳片","豆瓣高分","动作","喜剧","爱情","悬疑","恐怖","科幻","治愈","文艺","成长","动画","华语","欧美","韩国","日本",""]
+		this.typeList = ["经典","冷门佳片","豆瓣高分","动作","喜剧","爱情","悬疑","恐怖","科幻","治愈","文艺","成长","动画","华语","欧美","韩国","日本",""];
+		this.window_height = 0;
 	}
 	
 	componentWillMount(){
 		/*promise解决回调地狱*/
-		this.hotFilm().then(this.freeFilm.bind(this)).then(this.newFilm.bind(this));	
+		this.hotFilm().then(this.freeFilm.bind(this)).then(this.newFilm.bind(this));
+		this.window_height = $(window).height();
 	}
 	
 	/*影院热映promise对象*/
@@ -58,7 +60,7 @@ class Film extends Component{
 	
 	render(){
 		return(
-			<div className="content">
+			<div className="content" style={{height:this.window_height}}>
 				<div className="content_wrap">
 					<div className="pt10">
 						{
@@ -78,7 +80,7 @@ class Film extends Component{
 							}
 						</ul>
 					</div>
-					<DownLoad/>
+					<DownLoad msg="我们的精神角落"/>
 				</div>
 			</div>
 		)

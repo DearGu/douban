@@ -28,6 +28,24 @@ li,div,a,input{
         margin: 0 auto;
     }
 }
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+    .content{
+        .status_bar{
+            &:after{
+                transform: scaleY(0.5);
+                -webkit-transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+            }
+        }
+        .boardcast_content{
+            &:after{
+                transform: scaleY(0.5);
+                -webkit-transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+            }
+        }
+    }
+}
 
 //修改滚动条样式
 
@@ -92,6 +110,9 @@ li,div,a,input{
 .mr15{
     margin-right: 1rem;
 }
+.mr20{
+    margin-right: (20/15)*1rem;
+}
 .pt10{
     padding-top: 0.666666rem;
 }
@@ -112,6 +133,9 @@ li,div,a,input{
 }
 .c42bd56{
     color:#42bd56;
+}
+.caaa{
+    color: #aaa;
 }
 .content{
     width: 100%;
@@ -142,6 +166,9 @@ li,div,a,input{
 }
 .fz14{
     font-size: (14/15)*1rem;
+}
+.fz15{
+    font-size: 1rem;
 }
 .c111{
     color:#111;

@@ -11,10 +11,12 @@ class Content extends Component{
 		this.state = {hotList:[],moreTip:true,lock_scroll:false};
 		this.currentDate = new Date();
 		this.sumDate = 0;
+		this.window_height = 0;
 	}
 	
 	componentWillMount(){
 		this.loadListData(1);
+		this.window_height = $(window).height();
 	}
 	
 	/*加载数据*/
@@ -53,7 +55,7 @@ class Content extends Component{
 	
 	render(){
 		return(
-			<div className="content" onTouchMove={this.loadMore.bind(this)} onScroll={this.loadMore.bind(this)}>
+			<div className="content" style={{height:this.window_height}} onTouchMove={this.loadMore.bind(this)} onScroll={this.loadMore.bind(this)}>
 				<div className="content_wrap">
 					<QuickNav/>
 					{
