@@ -27,9 +27,13 @@ class BoardCast extends Component{
 		});
 	}
 	
+	changeReportBtn(){
+		$(".report_btn").hide();
+	}
+	
 	render(){
 		return(
-			<div className="content" style={{height:this.window_height}}>
+			<div className="content" style={{height:this.window_height}} onTouchEnd={this.changeReportBtn.bind(this)}>
 				<div className="download_tips">
 					<div className="download_tips_wrap">
 						<div className="">打开App, 回复广播</div>

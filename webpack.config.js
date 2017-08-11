@@ -1,4 +1,5 @@
 var webpack = require("webpack");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	devtool:"source-map",
 	entry:"./index.js",
@@ -39,5 +40,12 @@ module.exports = {
 		inline:true,
 		port:8888,
 		disableHostCheck:true  //设置为true可以允许IP访问
-	}
+	},
+	
+	plugins: [
+	    new HtmlWebpackPlugin({
+	        hash: true,
+	        template:"./template.html",
+	    })
+	]
 }

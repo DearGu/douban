@@ -1,9 +1,20 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
+import * as action from "../redux/action/boardcast.js";
+import {connect} from "react-redux";
 
 class BoardCastTemplate extends Component{
+	constructor(props){
+		super(props);
+	}
+	
+	changeReportBtn(e){
+		e.stopPropagation();
+		getComputedStyle(e.target.parentNode.lastChild)["display"]=="none"? e.target.parentNode.lastChild.style.display = "block":e.target.parentNode.lastChild.style.display = "none";
+	}
+	
 	render(){
-		let card_content = this.props.content.card
+		let card_content = this.props.content.card;
 		return(
 			<div>
 				<div className="clear">
@@ -63,7 +74,8 @@ class BoardCastTemplate extends Component{
 							<span>{this.props.content.reshares_count}</span>
 						</div>
 						<div className="fr">
-							<i className="ic_more"></i>
+							<i className="ic_more" onTouchEnd={this.changeReportBtn.bind(this)}></i>
+							<div className="report_btn">举报</div>
 						</div>
 					</div>
 				</div>
@@ -72,4 +84,10 @@ class BoardCastTemplate extends Component{
 	}
 }
 
-export default BoardCastTemplate;
+const mapStateToProps = (state) =>{
+	return{
+		btnStatus:state
+	}
+}
+
+export default connect(mapStateToProps,action)(BoardCastTemplate);

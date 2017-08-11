@@ -4,9 +4,13 @@ import "../scss/NavBar.scss";
 import {HashRouter as Router,Route,Link} from "react-router-dom";
 
 class NavBar extends Component{
+	changeReportBtn(){
+		$(".report_btn").hide();
+	}
+	
 	render(){
 		return(
-			<div className="NavBar">
+			<div className="NavBar" onTouchEnd={this.changeReportBtn.bind(this)}>
 				<div className="NavBar-inner">					
 					<Link to={`${this.props.match.url}/hot`}>
 						<h1 className="logo">
