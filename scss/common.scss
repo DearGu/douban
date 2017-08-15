@@ -181,3 +181,59 @@ li,div,a,input{
 .c111{
     color:#111;
 }
+.none{
+    display: none;
+}
+@-webkit-keyframes openView{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes closeView{
+    0%{
+        opacity: 1;
+        visibility:visible;
+    }
+    100%{
+        opacity: 0;
+        visibility:hidden;
+    }
+}
+.image_view{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    top:0;
+    z-index: 5;
+    background: #000;
+    img{
+        width: 100%;
+        position: absolute;
+        margin: auto;
+        top:0;
+        bottom:0;
+    }
+    span{
+        display: block;
+        position: absolute;
+        font-size: 2rem;
+        top:0;
+        right: (10/15)*1rem;
+        color: #a7a7a7;
+        z-index: 2;
+    }
+}
+.open{
+    visibility: visible;
+    animation: openView 0.5s;
+    -webkit-animation: openView 0.5s;
+}
+.close{
+    animation: closeView 0.5s;
+    -webkit-animation: closeView 0.5s;
+}
+

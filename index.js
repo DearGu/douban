@@ -6,9 +6,9 @@ import "./scss/common.scss";
 import {HashRouter as Router,Route,Link} from "react-router-dom";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
-import toDoReportBtn from "./redux/reducer/boardcast.js";
+import Reducer from "./redux/reducer/reducer.js";
 
-const store = createStore(toDoReportBtn);
+const store = createStore(Reducer);
 
 class App extends Component{
 	render(){
