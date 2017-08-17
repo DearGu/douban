@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import userPic from "../images/user_normal.jpg";
 import BoardCastItem from "./BoardCastItem";
 import DownLoad from "./DownLoad";
+import * as action from "../redux/action/index";
+import {connect} from "react-redux";
+import createHashHistory from "history/createHashHistory";
 
 class BoardCast extends Component{
 	constructor(props){
@@ -35,6 +38,11 @@ class BoardCast extends Component{
 		$(".report_btn").hide();
 	}
 	
+	handleTouchBar(){
+		/*如果没有登录跳去登录界面*/
+		!this.props.userStatus.IndexReudcer.isLogin? createHashHistory().push("/login"):"";
+	}
+	
 	render(){
 		return(
 			<div className="content" style={{height:this.window_height}} onTouchEnd={this.changeReportBtn.bind(this)}>
@@ -47,10 +55,10 @@ class BoardCast extends Component{
 						</div>
 					</div>
 				</div>
-				<div className="status_bar">
+				<div className="status_bar" onTouchEnd={this.handleTouchBar.bind(this)}>
 					<div>
 						<img src={userPic}/>
-						<span className="caaa fz15">登录发广播</span>
+						<span className="caaa fz15">{!this.props.userStatus.IndexReudcer.isLogin? "登录发广播":"分享你的点滴"}</span>
 					</div>
 					<div>
 						<span className="icon_pen"></span>
@@ -63,7 +71,6 @@ class BoardCast extends Component{
 					}					
 				</div>
 				{
-					console.log(this.state.moreBoardcast),
 					!this.state.moreBoardcast? <div className="boardcast_loadTips">加载中</div>:""
 				}
 				<div className="moreBoardcast" style={{display: this.state.moreBoardcast? "block":"none"}} onTouchEnd={this.loadBoardCast.bind(this)}>显示更多广播</div>
@@ -73,4 +80,10 @@ class BoardCast extends Component{
 	}
 }
 
-export default BoardCast;
+const mapStateToProps = (state) =>{
+	return{
+		userStatus:state
+	}
+}
+
+export default connect(mapStateToProps,action)(BoardCast);

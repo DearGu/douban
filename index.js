@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
 import Home from "./components/Home";
+import Login from "./components/Login";
 import Content from "./components/Content";
 import "./scss/common.scss";
 import {HashRouter as Router,Route,Link} from "react-router-dom";
@@ -15,6 +16,7 @@ class App extends Component{
 		return(
 			<div className="wrap">
 				<Route path="/home" component={Home}/>
+				<Route path="/login" component={Login}/>
 			</div>
 		)
 	}

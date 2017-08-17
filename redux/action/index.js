@@ -10,3 +10,9 @@ export const closeView = () =>{
 		type:"close_view"
 	}
 }
+
+export const login = () =>{
+	return{
+		type:"user_login"
+	}
+}

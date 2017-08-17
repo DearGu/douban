@@ -16,9 +16,9 @@ class ImageView extends Component{
 	
 	render(){
 		return(
-			<div className={this.props.imgMsg.Index.isShow? "image_view open":this.state.isClick? "image_view close":"image_view"}>
+			<div className={this.props.imgMsg.IndexReudcer.isShow? "image_view open":this.state.isClick? "image_view close":"image_view"}>
 				<span onTouchEnd={this.closeImg.bind(this)}>×</span>
-				<img src={this.props.imgMsg.Index.url}/>
+				<img src={this.props.imgMsg.IndexReudcer.url}/>
 			</div>
 		)
 	}
