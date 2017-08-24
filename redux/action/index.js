@@ -16,3 +16,15 @@ export const login = () =>{
 		type:"user_login"
 	}
 }
+
+export const openSearch = () =>{
+	return{
+		type:"open_search"
+	}
+}
+
+export const closeSearch = () =>{
+	return{
+		type:"close_search"
+	}
+}

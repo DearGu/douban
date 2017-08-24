@@ -60,6 +60,26 @@ li,div,a,input{
             -webkit-transform-origin: 0 0;
         }
     }
+    .search_wrap{
+        .search_bar,.tab_wrap,.nav_item{
+            &:after{
+                transform: scaleY(0.5);
+                -webkit-transform: scaleY(0.5);
+                -webkit-transform-origin: 0 0;
+            }
+        }
+        .nav_item{
+            span{
+                &:nth-child(1){
+                    &:after{
+                        transform: scaleX(0.5);
+                        -webkit-transform: scaleX(0.5);
+                        -webkit-transform-origin: 0 0;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //修改滚动条样式
@@ -152,6 +172,30 @@ li,div,a,input{
 }
 .c42bd56{
     color:#42bd56;
+}
+.c7a6adb{
+    color:#7a6adb;
+}
+.ce6467e{
+    color:#e6467e;
+}
+.cf48f2e{
+    color:#f48f2e;
+}
+.c5774c5{
+    color:#5774c5;
+}
+.c596cdd{
+    color:#596cdd;
+}
+.c40cfa9{
+    color:#40cfa9;
+}
+.c42bd56{
+    color:#42bd56;
+}
+.ce1644d{
+    color:#e1644d;
 }
 .caaa{
     color: #aaa;

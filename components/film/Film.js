@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
-import RowItem from "./RowItem";
-import DownLoad from "./DownLoad";
+import RowItem from "../RowItem";
+import DownLoad from "../DownLoad";
 
 class Film extends Component{
 	constructor(props){

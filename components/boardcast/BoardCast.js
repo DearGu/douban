@@ -1,9 +1,9 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
-import userPic from "../images/user_normal.jpg";
+import userPic from "../../images/user_normal.jpg";
 import BoardCastItem from "./BoardCastItem";
-import DownLoad from "./DownLoad";
-import * as action from "../redux/action/index";
+import DownLoad from "../DownLoad";
+import * as action from "../../redux/action/index";
 import {connect} from "react-redux";
 import createHashHistory from "history/createHashHistory";
 

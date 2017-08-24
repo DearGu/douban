@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
-import * as action from "../redux/action/index.js";
+import * as action from "../../redux/action/index.js";
 import {connect} from "react-redux";
 
 class BoardCastTemplate extends Component{
@@ -53,10 +53,10 @@ class BoardCastTemplate extends Component{
 								}
 								{
 									this.props.content.images.length>0? (
-										this.props.content.images.length==1? <img src={this.props.content.images[0].normal.url} onTouchEnd={this.ImgView.bind(this,this.props.content.images[0].normal.url)}/>:(
+										this.props.content.images.length==1? <img src={this.props.content.images[0].normal.url} onClick={this.ImgView.bind(this,this.props.content.images[0].normal.url)}/>:(
 											<div className="img_wrap clear">
 												{
-													this.props.content.images.map((item,idx)=> <img src={item.normal.url} key={idx} onTouchEnd={this.ImgView.bind(this,this.props.content.images[0].normal.url)}/>)
+													this.props.content.images.map((item,idx)=> <img src={item.normal.url} key={idx} onClick={this.ImgView.bind(this,this.props.content.images[0].normal.url)}/>)
 												}										
 											</div>
 										)

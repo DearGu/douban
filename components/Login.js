@@ -31,7 +31,7 @@ class Login extends Component{
 				<div className="form_wrap">
 					<div>
 						<div>
-							<input className="userName_input" type="text" placeholder="邮箱 / 手机号 / 用户名" ref={(input)=> this.userName = input}/>
+							<input className="userName_input" type="text" placeholder="邮箱 / 手机号 / 用户名" ref={(input)=> this.userName = input} autoFocus/>
 						</div>
 						<div className="relative">
 							<input className="password_input" type="password" placeholder="密码" ref={(input)=> this.psw = input}/>

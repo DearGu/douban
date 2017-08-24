@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import ReactDOM from "react-dom";
 import QuickNav from "./QuickNav";
 import HotList from "./HotList";
-import "../scss/content.scss"
+import "../../scss/content.scss"
 
 class Content extends Component{
 	constructor(props){
