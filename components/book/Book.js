@@ -14,7 +14,7 @@ class Book extends Component{
 	componentWillMount(){
 		/*promise解决回调地狱*/
 		this.fictionBook().then(this.NofictionBook.bind(this)).then(this.BookShop.bind(this));	
-		this.window_height = $(window).height();
+		this.window_height = $(window).height() - 47;
 	}
 	
 	/*虚构类图书promise对象*/

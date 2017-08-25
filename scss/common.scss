@@ -158,6 +158,12 @@ li,div,a,input{
 .pt15{
     padding-top: 1rem;
 }
+.pt20{
+    padding-top: (20/15)*1rem;
+}
+.pb20{
+    padding-bottom: (20/15)*1rem;
+}
 .c2384E8{
     color:#2384E8;
 }
@@ -202,7 +208,6 @@ li,div,a,input{
 }
 .content{
     width: 100%;
-    padding-top: 3.1333333rem;
     box-sizing: border-box;
     overflow-y: auto;
 }

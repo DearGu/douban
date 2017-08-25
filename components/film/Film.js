@@ -14,33 +14,33 @@ class Film extends Component{
 	componentWillMount(){
 		/*promise解决回调地狱*/
 		this.hotFilm().then(this.freeFilm.bind(this)).then(this.newFilm.bind(this));
-		this.window_height = $(window).height();
+		this.window_height = $(window).height() - 47;
 	}
 	
 	/*影院热映promise对象*/
 	hotFilm(){
 		return new Promise((resolve,reject)=>{
-			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items","影院热映",resolve);
+			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items","影院热映","hot_film",resolve);
 		});
 	}
 	
 	/*免费在线观影promise对象*/
 	freeFilm(){
 		return new Promise((resolve,reject)=>{
-			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_free_stream/items","免费在线观影",resolve);
+			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_free_stream/items","免费在线观影","free_film",resolve);
 		});
 	}
 	
 	/*新片速递promise对象*/
 	newFilm(){
 		return new Promise((resolve,reject)=>{
-			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_latest/items","新片速递",resolve);
+			this.loadFilm("https://m.douban.com/rexxar/api/v2/subject_collection/movie_latest/items","新片速递","new_film",resolve);
 		});
 	}
 	
 	
 	/*加载电影数据*/
-	loadFilm(api,title,callback){
+	loadFilm(api,title,locId,callback){
 		let self = this;
 		$.ajax({
 			type:"get",
@@ -50,7 +50,8 @@ class Film extends Component{
 			success:function(result){
 				let obj = {};
 				obj.title = title;
-				obj.list = result.subject_collection_items;				
+				obj.list = result.subject_collection_items;		
+				obj.locId = locId;
 				/*如果直接self.setState({FilmArr:self.state.FilmArr.push(obj)})得到的FilmArr为1,因为push()是返回数组的长度*/
 				self.setState({FilmArr:self.state.FilmArr.concat(obj)});
 				callback? callback():"";

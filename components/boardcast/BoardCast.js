@@ -16,7 +16,7 @@ class BoardCast extends Component{
 	
 	componentWillMount(){
 		this.loadBoardCast();
-		this.window_height = $(window).height();
+		this.window_height = $(window).height() - 47;
 	}
 	
 	loadBoardCast(){

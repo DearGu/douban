@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import ReactDOM from "react-dom";
 import CardItem from "./CardItem"; 
+import {HashRouter as Router,Route,Link} from "react-router-dom";
 
 class RowItem extends Component{
 	render(){
@@ -8,7 +9,9 @@ class RowItem extends Component{
 			<div className="row_item mb35">
 				<div className="relative">
 					<h2 className="type_title">{this.props.item.title}</h2>
-					<span className="moreFilm">更多</span>
+					<Link to={`/home/filmsmore/${this.props.item.locId}`} className="moreFilm">
+						更多
+					</Link>	
 				</div>
 				{
 					this.props.item.header? (

@@ -5,9 +5,6 @@
     box-sizing: border-box;
     padding: 0 1.2rem;
     background: #fff;
-    position: absolute;
-    top:0;
-    z-index: 3;
     
     .NavBar-inner{        
         height: 100%;
@@ -31,6 +28,7 @@
         width: 1.666666rem;
         height: 1.2rem;
         display: inline-block;
+        margin-top: 3px;
         background: url("../images/ic_search.png") no-repeat;
         background-size: cover;
         vertical-align: middle;

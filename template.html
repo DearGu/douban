@@ -12,13 +12,31 @@
 <script type="text/javascript">
 //	监听窗口改变获取content高度
 	function getContentHeight(){
-		const currentHeight = $(window).height();
+		const currentHeight = $(window).height() - 47;
 		$(".content").css("height",currentHeight+"px");
 	}
 	
 	getContentHeight();
 	
 	$(window).on("resize",getContentHeight);
+	
+	/*解决ios浏览器滑动页面溢出*/
+	var selScrollable = '.content';
+	$(document).on('touchmove',function(e){
+	  e.preventDefault();
+	});
+
+	$('body').on('touchstart', selScrollable, function(e) {
+	  if (e.currentTarget.scrollTop === 0) {
+	    e.currentTarget.scrollTop = 1;
+	  } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+	    e.currentTarget.scrollTop -= 1;
+	  }
+	});
+
+	$('body').on('touchmove', selScrollable, function(e) {
+	  e.stopPropagation();
+	});
 	
 </script>
 </html>

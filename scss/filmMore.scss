@@ -1,0 +1,18 @@
+.filmMore_title{
+    padding: (16/15)*1rem 0 (6/15)*1rem 4%;
+    font-size: (24/15)*1rem;
+    font-weight: normal;
+    color:#494949;
+}
+.film_wrap{
+    padding-top: (20/15)*1rem;
+    .card_item{
+        width: (1/3)*100%;
+        margin: 0 0 (20/15)*1rem 0;
+        padding: 0 4%;
+        box-sizing: border-box;
+    }
+    .card_cover{
+        height: 8.5rem;
+    }
+}
