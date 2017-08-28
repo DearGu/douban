@@ -60,10 +60,18 @@
 //  首页列表样式
     .hotListItem{
         width: 100%;
+        position: relative;
         padding: 1.66666rem 0;
         box-sizing: border-box;
-        border-bottom: 1px solid #f6f6f6;
-        
+        &:after{
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #E8E8E8;
+        }
         
         h3{
             font-size: 1.05rem;

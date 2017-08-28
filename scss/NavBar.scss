@@ -1,10 +1,19 @@
 .NavBar{
     width: 100%;
     height: 47px;
-    border-bottom: 1px solid #f3f3f3;
+    position: relative;
     box-sizing: border-box;
     padding: 0 1.2rem;
     background: #fff;
+    &:after{
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #E8E8E8;
+    }
     
     .NavBar-inner{        
         height: 100%;

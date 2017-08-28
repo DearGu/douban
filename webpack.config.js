@@ -48,5 +48,10 @@ module.exports = {
 	        hash: true,
 	        template:"./template.html",
 	    })
+//	    ,new webpack.optimize.UglifyJsPlugin({
+//          compress: {
+//              warnings: false
+//          }
+//     })
 	]
 }

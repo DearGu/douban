@@ -10,7 +10,7 @@ body,ul,p,h1,h2,h3{
     font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
 html,ul,p,h1,h2,h3{
-    font-size: $root-width;
+    font-size: 1rem;
     color:#333;
 }
 ul{
@@ -28,16 +28,26 @@ li,div,a,input{
         margin: 0 auto;
     }
 }
+@media screen and (max-width:360px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:960px){
+    html{
+        font-size: 20px;
+    }
+}
 @media screen and (-webkit-min-device-pixel-ratio: 2){
-    .content{
-        .status_bar{
-            &:after{
-                transform: scaleY(0.5);
-                -webkit-transform: scaleY(0.5);
-                -webkit-transform-origin: 0 0;
-            }
+    .NavBar{
+        &:after{
+            transform: scaleY(0.5);
+            -webkit-transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
         }
-        .boardcast_content{
+    }
+    .content{
+        .status_bar,.hotListItem,.boardcast_content{
             &:after{
                 transform: scaleY(0.5);
                 -webkit-transform: scaleY(0.5);

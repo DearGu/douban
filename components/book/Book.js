@@ -66,7 +66,7 @@ class Book extends Component{
 				<div className="content_wrap">
 					<div className="pt10">
 						{
-							this.state.BookArr.map((item,idx)=> <RowItem item={item} key={idx} cardType={item.type}/>)
+							this.state.BookArr.map((item,idx)=> <RowItem item={item} key={idx} cardType={item.type} moreType="book"/>)
 						}
 					</div>
 					<div>

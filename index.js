@@ -17,7 +17,6 @@ class App extends Component{
 			<div className="wrap">
 				<Route path="/home" component={Home}/>
 				<Route path="/login" component={Login}/>
-				<Redirect to="/home/hot"/>
 			</div>
 		)
 	}

@@ -65,7 +65,7 @@ class Film extends Component{
 				<div className="content_wrap">
 					<div className="pt10">
 						{
-							this.state.FilmArr.map((item,idx)=> <RowItem item={item} key={idx} cardType="rating"/>)
+							this.state.FilmArr.map((item,idx)=> <RowItem item={item} key={idx} cardType="rating" moreType="film"/>)
 						}
 					</div>
 					<div>

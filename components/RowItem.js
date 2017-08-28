@@ -9,9 +9,10 @@ class RowItem extends Component{
 			<div className="row_item mb35">
 				<div className="relative">
 					<h2 className="type_title">{this.props.item.title}</h2>
-					<Link to={`/home/filmsmore/${this.props.item.locId}`} className="moreFilm">
-						更多
-					</Link>	
+					{
+						this.props.moreType=="film"? <Link to={`/home/filmsmore/${this.props.item.locId}`} className="moreFilm">更多</Link>:
+							<span className="moreFilm">更多</span>
+					}	
 				</div>
 				{
 					this.props.item.header? (
